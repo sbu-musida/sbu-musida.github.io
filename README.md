@@ -1,6 +1,6 @@
 # WELCOME TO MY DOMAIN
 
-I'm a Full Stack Software Developer and Digital Marketing Specialist.
+I'm a Full Stack Software Developer, Data Analyst and Digital Marketer.
 
 ## Skills
 
@@ -12,11 +12,17 @@ Provide Web Analytics to Clients.
 
 Build Social Media Campaigns.
 
+Provide System Automation
+
+Big Data and Artificial Intelligence
+
 Create Relational Databases.
 
 Build E-Commerce Stores
 
 Develop Data Science Solutions
+
+IT Support
 
 ## Tools
 
