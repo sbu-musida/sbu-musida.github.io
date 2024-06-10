@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap:
+https://sbu-musida.github.io/sitemap.xml
+
+https://www.google.com/ping?sitemap=https://sbu-musida.github.io/sitemap.xml
