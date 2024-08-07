@@ -138,6 +138,12 @@ a:hover {
     font-size: 0.9375em;
     color: #8c8c8c; }
 
+.portfolio .portfolio-list {
+  margin-left: 0px; }
+  .portfolio .portfolio-list li:first-child {
+    font-size: 0.9375em;
+    color: #8c8c8c; }
+
 .quote {
   background: url(../img/bg.jpg);
   padding: 20px 0px;
