@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Digital Clock</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="app"> 
+<div id="main">
+  <div id="time">
+    <span id="hours">{{hours}}</span><span id="min">{{minutes}}</span><span id="sec">{{sec}}</span> <span id="ampm">{{ampm}}</span>
+  </div>
+  <div id='days'>
+    <div class="days" v-for="day in days" v-bind:class="{active:day.active}">{{day.text}}</div>
+  </div>
+  <div id="fullDate">
+    <span id="month">{{month}}</span>&nbsp;<span id="date">{{date}}</span>&nbsp;<span id="year">{{year}}</span>
+  </div>
+</div> 
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
