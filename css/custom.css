@@ -85,7 +85,7 @@ a:hover {
   position: relative; }
   .section .container:after {
     position: absolute;
-    content: url(../img/separator.png);
+  /*  content: url(../img/separator.png); */
     left: 20px; }
   .section .container h1 {
     text-transform: uppercase;
