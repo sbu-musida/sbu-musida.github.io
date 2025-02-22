@@ -37,8 +37,9 @@
     <link rel="stylesheet" href="css/font-awesome.min.css" />
     <link rel="stylesheet" href="css/custom.min.css" />
     <link rel="shortcut icon" href="img/favicon.png" />
-	<link href='https://fonts.googleapis.com/css?family=Playfair+Display+SC:700' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display+SC:700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+
 	<style>
 		.intro h1:before {
 			/* Edit this with your name or anything else */
@@ -48,6 +49,27 @@
 		a {
                      text-decoration: none;
                 }
+		.collapsible {
+			background-color: #f1f1f1;
+			color: #444;
+			cursor: pointer;
+			padding: 10px;
+			width: 100%;
+			border: none;
+			text-align: left;
+			outline: none;
+			font-size: 25px;
+			font-family: 'Playfair Display SC', serif;
+		}
+		.active, .collapsible:hover {
+			background-color: #ccc;
+		}
+		.collapsible-content {
+			padding: 0 18px;
+			display: none;
+			overflow: hidden;
+			background-color: #f9f9f9;
+		}
 	</style>
 </head>
 <body oncontextmenu="return false">
@@ -60,7 +82,7 @@
 				</div>
 			    <nav id="navbar-1" class="navbar item-nav">
 				    <ul>
-				        <li class="active"><a href="#about">About</a></li>
+				        <li><a href="#about">About</a></li>
 				        <li><a href="#experiences">Experiences</a></li>
 				        <li><a href="#achievements">Achievements</a></li>
 				        <li><a href="#skills">Skills</a></li>
@@ -102,138 +124,148 @@
 	<!-- Work Experience -->
 	<div class="work section second" id="experiences">
 		<div class="container">
-			<h1>Work<br>Experiences</h1>
-			<ul class="work-list">
-				<li><b>Standard Bank Group</b></li>
-				<li>Mainframe Developer</li>
-				<li>2024-Present</li>
-			</ul>
-			<ul class="work-list">
-				<li><b>Afterskoolcoders Pty Ltd</b></li>
-				<li>Freelance Web Developer</li>
-				<li>2020-2023</li>
-			</ul>
-			<ul class="work-list">
-				<li><b>Tshwane University of Technology</b></li>
-				<li>IT Support Assistant</li>
-				<li>Student Assistant (Tutor)</li>
-				<li>2019-2023</li>
-			</ul>
+			<button class="collapsible">Work Experiences</button>
+			<div class="collapsible-content">
+				&nbsp;&nbsp;
+				<ul class="work-list">
+					<li><b>Standard Bank Group</b></li>
+					<li>Mainframe Developer</li>
+					<li>2024-Present</li>
+				</ul>
+				<ul class="work-list">
+					<li><b>Afterskoolcoders Pty Ltd</b></li>
+					<li>Freelance Web Developer</li>
+					<li>2020-2023</li>
+				</ul>
+				<ul class="work-list">
+					<li><b>Tshwane University of Technology</b></li>
+					<li>IT Support Assistant</li>
+					<li>Student Assistant (Tutor)</li>
+					<li>2019-2023</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 
 	<!-- Award & Achievements -->
 	<div class="award section second" id="achievements">
 		<div class="container">
-			<h1>Award &amp;<br>Achievements</h1>
-			<ul class="award-list list-flat">
-				<li>February 2025</li>
-				<li><a href="https://learn.microsoft.com/api/credentials/share/en-us/MusidaSibusiso/30FB019BCB7321EC?sharingId" target="_blank">Microsoft Certified: Power Platform Fundamentals</a></li>
-			</ul>
+			<button class="collapsible">Award & Achievements</button>
+			<div class="collapsible-content">
+				&nbsp;&nbsp;
+				<ul class="award-list list-flat">
+					<li>February 2025</li>
+					<li><a href="https://learn.microsoft.com/api/credentials/share/en-us/MusidaSibusiso/30FB019BCB7321EC?sharingId" target="_blank">Microsoft Certified: Power Platform Fundamentals</a></li>
+				</ul>
+				<ul class="award-list list-flat">
+					<li>January 2025</li>
+					<li><a href="https://www.credly.com/badges/7d24fa04-52aa-47a2-ad17-8b2ae5c010f2/linked_in_profile" target="_blank">Db2 12 for z/OS Basic Database Administration</a></li>
+				</ul>
+				
+				<ul class="award-list list-flat">
+					<li>December 2024</li>
+					<li><a href="https://www.credly.com/badges/ba0d3ad1-2f9e-4135-8061-13dc583a0f38/linked_in_profile" target="_blank">Meta Full-Stack Engineer Certificate</a></li>
+				</ul>
 
-			<ul class="award-list list-flat">
-				<li>January 2025</li>
-				<li><a href="https://www.credly.com/badges/7d24fa04-52aa-47a2-ad17-8b2ae5c010f2/linked_in_profile" target="_blank">Db2 12 for z/OS Basic Database Administration</a></li>
-			</ul>
-			
-			<ul class="award-list list-flat">
-				<li>December 2024</li>
-				<li><a href="https://www.credly.com/badges/ba0d3ad1-2f9e-4135-8061-13dc583a0f38/linked_in_profile" target="_blank">Meta Full-Stack Engineer Certificate</a></li>
-			</ul>
+				<ul class="award-list list-flat">
+					<li>November 2024</li>
+					<li><a href="https://www.credly.com/badges/f56d5b56-86a4-4e3a-b3bd-8a43408e393f/linked_in_profile" target="_blank">IBM Developer for z/OS Basics</a></li>
+				</ul>
 
-			<ul class="award-list list-flat">
-				<li>November 2024</li>
-				<li><a href="https://www.credly.com/badges/f56d5b56-86a4-4e3a-b3bd-8a43408e393f/linked_in_profile" target="_blank">IBM Developer for z/OS Basics</a></li>
-			</ul>
+				<ul class="award-list list-flat">
+					<li>November 2024</li>
+					<li><a href="https://www.credly.com/badges/eace4f50-8d1c-4d31-ace3-728c5deaad90/linked_in_profile" target="_blank">z/OS JCL and Utilities</a></li>
+				</ul>
+				
+				<ul class="award-list list-flat">
+					<li>October 2024</li>
+					<li><a href="https://learn.microsoft.com/api/credentials/share/en-us/MusidaSibusiso/BE914379BE8DEE83?sharingId" target="_blank">Microsoft Certified: Azure AI Fundamentals</a></li>
+				</ul>
+				
+				<ul class="award-list list-flat">
+					<li>October 2024</li>
+					<li><a href="https://www.credly.com/badges/cfe006cd-2507-44e5-85be-33d5c8938627/linked_in_profile" target="_blank">z/OS REXX Programming</a></li>
+				</ul>
+				
+				<ul class="award-list list-flat">
+					<li>September 2024</li>
+					<li><a href="https://learn.microsoft.com/api/credentials/share/en-us/MusidaSibusiso/7052FBF90C2549A8?sharingId" target="_blank">Microsoft Certified: Azure Fundamentals</a></li>
+				</ul>
+				
+				<ul class="award-list list-flat">
+					<li>July 2024</li>
+					<li><a href="https://www.credly.com/badges/a004db30-fe48-4eaa-8705-56d25ffe7e86/linked_in_profile" target="_blank">IBM z/OS Mainframe Practitioner</a></li>
+				</ul>
+				
+				<ul class="award-list list-flat">
+					<li>June 2024</li>
+					<li><a href="https://www.linkedin.com/learning/certificates/8308e0d917898b8ea00c5eb9b0594bb281506e7b9784d5d8011503d2ed2a177c" target="_blank">COBOL Essential Training</a></li>
+				</ul>
+				
+				<ul class="award-list list-flat">
+					<li>September 2023</li>
+					<li><a href="https://www.cloudskillsboost.google/public_profiles/1284facb-3a1a-4981-9b43-90ed39f97bdc/badges/5185092" target="_blank">Generative AI Fundamentals</a></li>
+				</ul>
+				
+				<ul class="award-list list-flat">
+					<li>February 2023</li>
+					<li><a href="https://www.coursera.org/account/accomplishments/professional-cert/M24FNNUDMY7R" target="_blank">Google IT Automation with Python Professional Certificate</a></li>
+				</ul>
 
-			<ul class="award-list list-flat">
-				<li>November 2024</li>
-				<li><a href="https://www.credly.com/badges/eace4f50-8d1c-4d31-ace3-728c5deaad90/linked_in_profile" target="_blank">z/OS JCL and Utilities</a></li>
-			</ul>
-			
-			<ul class="award-list list-flat">
-				<li>October 2024</li>
-				<li><a href="https://learn.microsoft.com/api/credentials/share/en-us/MusidaSibusiso/BE914379BE8DEE83?sharingId" target="_blank">Microsoft Certified: Azure AI Fundamentals</a></li>
-			</ul>
-			
-			<ul class="award-list list-flat">
-				<li>October 2024</li>
-				<li><a href="https://www.credly.com/badges/cfe006cd-2507-44e5-85be-33d5c8938627/linked_in_profile" target="_blank">z/OS REXX Programming</a></li>
-			</ul>
-			
-			<ul class="award-list list-flat">
-				<li>September 2024</li>
-				<li><a href="https://learn.microsoft.com/api/credentials/share/en-us/MusidaSibusiso/7052FBF90C2549A8?sharingId" target="_blank">Microsoft Certified: Azure Fundamentals</a></li>
-			</ul>
-			
-			<ul class="award-list list-flat">
-				<li>July 2024</li>
-				<li><a href="https://www.credly.com/badges/a004db30-fe48-4eaa-8705-56d25ffe7e86/linked_in_profile" target="_blank">IBM z/OS Mainframe Practitioner</a></li>
-			</ul>
-			
-			<ul class="award-list list-flat">
-				<li>June 2024</li>
-				<li><a href="https://www.linkedin.com/learning/certificates/8308e0d917898b8ea00c5eb9b0594bb281506e7b9784d5d8011503d2ed2a177c" target="_blank">COBOL Essential Training</a></li>
-			</ul>
-			
-			<ul class="award-list list-flat">
-				<li>September 2023</li>
-				<li><a href="https://www.cloudskillsboost.google/public_profiles/1284facb-3a1a-4981-9b43-90ed39f97bdc/badges/5185092" target="_blank">Generative AI Fundamentals</a></li>
-			</ul>
-			
-			<ul class="award-list list-flat">
-				<li>February 2023</li>
-				<li><a href="https://www.coursera.org/account/accomplishments/professional-cert/M24FNNUDMY7R" target="_blank">Google IT Automation with Python Professional Certificate</a></li>
-			</ul>
+				<ul class="award-list list-flat">
+					<li>April 2022</li>
+					<li><a href="https://www.coursera.org/account/accomplishments/specialization/7P2JWZYJYYCW" target="_blank">Meta Social Media Marketing Specialization</a></li>
+				</ul>
 
-			<ul class="award-list list-flat">
-				<li>April 2022</li>
-				<li><a href="https://www.coursera.org/account/accomplishments/specialization/7P2JWZYJYYCW" target="_blank">Meta Social Media Marketing Specialization</a></li>
-			</ul>
-
-			<ul class="award-list list-flat">
-				<li>December 2021</li>
-				<li><a href="https://www.coursera.org/account/accomplishments/professional-cert/RCK9K8S6T7W3" target="_blank">Google Data Analytics Professional Certificate</a></li>
-			</ul>
-			<ul class="award-list list-flat">
-				<li>September 2021</li>
-				<li><a href="https://www.linkedin.com/learning/certificates/dd4d99fb128eb325f9fabc60fe49ac02aee0fcaba3de767916ff1b325e4a0424" target="_blank"> Advance as a Digital Marketing Specialist</a></li>
-			</ul>
-
+				<ul class="award-list list-flat">
+					<li>December 2021</li>
+					<li><a href="https://www.coursera.org/account/accomplishments/professional-cert/RCK9K8S6T7W3" target="_blank">Google Data Analytics Professional Certificate</a></li>
+				</ul>
+				<ul class="award-list list-flat">
+					<li>September 2021</li>
+					<li><a href="https://www.linkedin.com/learning/certificates/dd4d99fb128eb325f9fabc60fe49ac02aee0fcaba3de767916ff1b325e4a0424" target="_blank"> Advance as a Digital Marketing Specialist</a></li>
+				</ul>
+			</div>
 		</div>
 	</div>
 
 	<!-- Technical Skills -->
 	<div class="skills section second" id="skills">
 		<div class="container">
-			<h1>Technical<br>Skills</h1>
-			<ul class="skill-list list-flat">
-				<li>Languages</li>
-				<li>Java/ Python/ COBOL/ JavaScript/ PHP/ C++/ SQL/ JCL/ CICS/ UML</li>
-			</ul>
-			<ul class="skill-list list-flat">
-				<li>Tools</li>
-				<li>IBM Z Mainframe/ AWS/ NodeJS/ Linux OS/ Google Cloud Platform/ GitHub/ MS Office 365/ Oracle DB/ VSCode/ Jupyter Notebook/ React/ MS Power Platform/ DB2/ REST APIs/ WordPress/ Azure Cloud/ Android SDK/ Power Shell/ TSO/ ISPF/ SDSF/ Lavaral</li>
-			</ul>
+			<button class="collapsible">Technical Skills</button>
+			<div class="collapsible-content">
+				&nbsp;&nbsp;
+				<ul class="skill-list list-flat">
+					<li>Languages</li>
+					<li>Java/ Python/ COBOL/ JavaScript/ PHP/ C++/ SQL/ JCL/ CICS/ UML</li>
+				</ul>
+				<ul class="skill-list list-flat">
+					<li>Tools</li>
+					<li>IBM Z Mainframe/ AWS/ NodeJS/ Linux OS/ Google Cloud Platform/ GitHub/ MS Office 365/ Oracle DB/ VSCode/ Jupyter Notebook/ React/ MS Power Platform/ DB2/ REST APIs/ WordPress/ Azure Cloud/ Android SDK/ Power Shell/ TSO/ ISPF/ SDSF/ Lavaral</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 
 	<!-- Portfolio -->
 	<div class="portfolio section second" id="portfolio">
 		<div class="container">
-			<h1>Portfolio</h1>
-			<ul class="portfolio-list list-flat">
-				<li><a href="/portfolio/pacman" target="_blank">Project 1 - Pacman Game</a></li>
-				<li><a href="/portfolio/calculator" target="_blank">Project 2 - Calculator</a></li>
-				<li><a href="/portfolio/checkers-game" target="_blank">Project 3 - Checkers Game</a></li>
-				<li><a href="/portfolio/matrix-effect" target="_blank">Project 4 - Matrix Effect</a></li>
-				<li><a href="/portfolio/bounce" target="_blank">Project 5 - Bounce Game</a></li>
-				<li><a href="/portfolio/digital-clock" target="_blank">Project 6 - Digital Clock</a></li>
-				<li><a href="/portfolio/hangman-game" target="_blank">Project 7 - Hangman Game</a></li>
-				<li><a href="/portfolio/hacking-simulator" target="_blank">Project 8 - Hacking Simulation</a></li>
-				<li><a href="/portfolio/cross-the-bridge" target="_blank">Project 9 - Bridge Crossing Game</a></li>
-				<li><a href="/portfolio/3d-solar-system" target="_blank">Project X - 3D Solar System</a></li>
-			</ul>
+			<button class="collapsible">Portfolio</button>
+			<div class="collapsible-content">
+				&nbsp;&nbsp;
+				<ul class="portfolio-list list-flat">
+					<li><a href="/portfolio/pacman" target="_blank">Project 1 - Pacman Game</a></li>
+					<li><a href="/portfolio/calculator" target="_blank">Project 2 - Calculator</a></li>
+					<li><a href="/portfolio/checkers-game" target="_blank">Project 3 - Checkers Game</a></li>
+					<li><a href="/portfolio/matrix-effect" target="_blank">Project 4 - Matrix Effect</a></li>
+					<li><a href="/portfolio/bounce" target="_blank">Project 5 - Bounce Game</a></li>
+					<li><a href="/portfolio/digital-clock" target="_blank">Project 6 - Digital Clock</a></li>
+					<li><a href="/portfolio/hangman-game" target="_blank">Project 7 - Hangman Game</a></li>
+					<li><a href="/portfolio/hacking-simulator" target="_blank">Project 8 - Hacking Simulation</a></li>
+					<li><a href="/portfolio/cross-the-bridge" target="_blank">Project 9 - Bridge Crossing Game</a></li>
+					<li><a href="/portfolio/3d-solar-system" target="_blank">Project X - 3D Solar System</a></li>
+				</ul>
+			</div>
 		</div>
 	</div>
 
@@ -272,6 +304,20 @@
 		strings: ["Software Developer", "Data Engineer", "Mainframe Programmer"],
 
 		typeSpeed:90,backDelay:700,contentType:"html",loop:!0,resetCallback:function(){newTyped()}}),$(".reset").click(function(){$("#typed").typed("reset")})});
+		document.addEventListener("DOMContentLoaded", function() {
+			var coll = document.getElementsByClassName("collapsible");
+			for (var i = 0; i < coll.length; i++) {
+				coll[i].addEventListener("click", function() {
+					this.classList.toggle("active");
+					var content = this.nextElementSibling;
+					if (content.style.display === "block") {
+						content.style.display = "none";
+					} else {
+						content.style.display = "block";
+					}
+				});
+			}
+		});
     </script>
 </body>
 </html>
