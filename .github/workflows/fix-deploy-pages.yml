@@ -1,0 +1,62 @@
+name: Fix Pages deployment
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    name: Build and deploy to GitHub Pages
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Detect publish directory
+        id: detect
+        run: |
+          set -euo pipefail
+          candidates=("public" "_site" "docs" "out" "dist")
+          for d in "${candidates[@]}"; do
+            if [ -d "$d" ] && [ "$(ls -A "$d")" ]; then
+              echo "publish_dir=$d" >> "$GITHUB_OUTPUT"
+              echo "Found publish directory: $d"
+              exit 0
+            fi
+          done
+          if [ -f index.html ]; then
+            echo "publish_dir=." >> "$GITHUB_OUTPUT"
+            echo "Found index.html in repo root"
+            exit 0
+          fi
+          echo "No publish directory or index.html found. If your site requires a build step, add it to this workflow or ensure the output directory contains static files." >&2
+          exit 1
+
+      - name: Debug publish directory
+        run: |
+          echo "Working directory: $(pwd)"
+          echo "Repo root listing:"
+          ls -la || true
+          echo "Publish dir chosen: ${{ steps.detect.outputs.publish_dir }}"
+          if [ -n "${{ steps.detect.outputs.publish_dir }}" ]; then
+            echo "Listing ${{ steps.detect.outputs.publish_dir }}:"
+            ls -la "${{ steps.detect.outputs.publish_dir }}" || true
+            if [ -f "${{ steps.detect.outputs.publish_dir }}/index.html" ]; then
+              echo "index.html found"
+            else
+              echo "index.html NOT found"
+            fi
+          fi
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: ${{ steps.detect.outputs.publish_dir }}
+
+      - name: Deploy to Pages
+        uses: actions/deploy-pages@v1
